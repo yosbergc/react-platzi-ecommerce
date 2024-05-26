@@ -5,12 +5,14 @@
     max-width: 1100px;
     justify-items: right;
     margin: 0 auto;
+    padding: 40px 0px;
 }
 .hero-setion img {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 150px);
 }
 .hero-setion p {
     line-height: 1.5rem;
+    font-size: 1.1rem;
 }
 .hero-setion h1, .hero-setion h1 span {
     font-size: 3rem;

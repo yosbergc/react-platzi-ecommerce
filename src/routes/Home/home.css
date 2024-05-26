@@ -1,0 +1,30 @@
+.categories {
+    display: grid;
+    grid-template-areas: 
+    "laptop headphones"
+    "keyboards headphones"
+    "tablets headphones";
+    grid-template-rows: 250px 250px 250px;
+    grid-template-columns: 500px 1fr;
+    max-width: 1200px;
+    gap: 10px;
+    margin: 0 auto;
+}
+.categories > .Laptop {
+    grid-area: laptop;
+}
+.categories > .Headphones {
+    grid-area: headphones;
+}
+.categories > .Keyboards {
+    grid-area: keyboards;
+}
+.categories > .TVs {
+    grid-area: tvs;
+}
+.categories > .Tablets {
+    grid-area: tablets;
+}
+.categories img {
+    width: 100%;
+}
