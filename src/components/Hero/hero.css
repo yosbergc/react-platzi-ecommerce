@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;   
-    padding: 0px 20px;
+    max-width: 1100px;
+    justify-items: right;
+    margin: 0 auto;
 }
 .hero-setion img {
     height: calc(100vh - 80px);
@@ -27,18 +29,18 @@ h3 {
     font-weight: 400;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0077ed;
+    background-color: #432273;
     border-radius: 24px;
     font-size: 1.2rem;
 }
 .addToCartHeroSecondary {
     margin-left: 20px;
-    color: #0077ed;
+    color: #432273;
     text-decoration: none;
     font-weight: 400;
     display: inline-block;
     padding: 10px 20px;
-    border: 1px solid #0077ed;
+    border: 1px solid #432273;
     border-radius: 24px;
     font-size: 1.2rem;
 }

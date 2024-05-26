@@ -1,10 +1,13 @@
 import './header.css'
 import Logo from '../../assets/images/LogoTransparent.png'
 import { NavLink } from 'react-router-dom'
-import { FaRegUser } from "react-icons/fa"
+import { CiUser } from "react-icons/ci"
+import PreHeader from '../PreHeader'
 import Cart from '../Cart'
 function Header() {
     return (
+        <>
+        <PreHeader/>
         <header>
             <section className='left'>
                 <img src={Logo} alt="BlackTech" className='headerLogo'/>
@@ -58,10 +61,11 @@ function Header() {
                         </li>
                     </ul>
                 </nav>
-                <FaRegUser size={20}/>
+                <CiUser size={20}/>
                 <Cart/>
             </section>
         </header>
+        </>
     )
 }
 export default Header
