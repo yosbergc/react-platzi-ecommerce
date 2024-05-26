@@ -1,0 +1,53 @@
+.phone {
+    background-color: #000000;
+    color: white;
+    padding: 50px 20px;
+    text-align: left;
+    position: relative;
+    height: 400px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.phone h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.phone p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.phone img {
+    position: absolute;
+    width: 700px;
+    top: 0px;
+    right: -70px;
+    transform: rotate(20deg);
+}
+.description {
+    margin-bottom: 10px;
+}
+.phone button {
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 24px;
+    font-weight: 500;
+    margin: 20px 0px;
+    cursor: pointer;
+    background: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+.phone button:hover {
+    background-color: white;
+    color: black;
+}
+.phone .information {
+    display: grid;
+    max-width: 50%;
+}
