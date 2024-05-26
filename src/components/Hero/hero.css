@@ -1,0 +1,44 @@
+.hero-setion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;   
+    padding: 0px 20px;
+}
+.hero-setion img {
+    height: calc(100vh - 80px);
+}
+.hero-setion p {
+    line-height: 1.5rem;
+}
+.hero-setion h1, .hero-setion h1 span {
+    font-size: 3rem;
+    font-weight: 800;
+}
+.hero-setion h1 span {
+    font-weight: 300;
+}
+h3 {
+    font-size: 1.5rem;
+}
+.addToCartHero {
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077ed;
+    border-radius: 24px;
+    font-size: 1.2rem;
+}
+.addToCartHeroSecondary {
+    margin-left: 20px;
+    color: #0077ed;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #0077ed;
+    border-radius: 24px;
+    font-size: 1.2rem;
+}

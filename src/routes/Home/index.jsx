@@ -1,8 +1,8 @@
+import Hero from '../../components/Hero'
 function Home() {
-    return (
-      <div className='Header'>
-        welcome
-      </div>
+    return (<>
+      <Hero/>
+    </>
     )
   }
   
