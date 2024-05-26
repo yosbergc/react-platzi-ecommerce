@@ -1,8 +1,9 @@
 .preheader {
     background-color: #232a34;
-    color: white;
+    color: #e7ecf4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    font-weight: 500;
 }
