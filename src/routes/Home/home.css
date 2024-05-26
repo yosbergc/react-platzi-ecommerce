@@ -4,11 +4,12 @@
     "laptop headphones"
     "keyboards headphones"
     "tablets headphones";
-    grid-template-rows: 250px 250px 250px;
+    grid-template-rows: 280px 280px 280px;
     grid-template-columns: 500px 1fr;
     max-width: 1200px;
     gap: 10px;
     margin: 0 auto;
+    padding: 20px 0px 50px 0px;
 }
 .categories > .Laptop {
     grid-area: laptop;
