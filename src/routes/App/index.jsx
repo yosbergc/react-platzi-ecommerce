@@ -14,6 +14,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/category/:category' element={<Home/>}/>
         <Route path='/account' element={<MyAccount/>}/>
         <Route path='/my-orders' element={<MyOrders/>}/>
         <Route path='/login' element={<SignIn/>}/>

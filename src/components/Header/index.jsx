@@ -1,5 +1,5 @@
 import './header.css'
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/LogoTransparent.png'
 import { NavLink } from 'react-router-dom'
 import { FaRegUser } from "react-icons/fa"
 import Cart from '../Cart'

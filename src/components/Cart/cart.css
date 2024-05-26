@@ -1,0 +1,11 @@
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cart p {
+    background-color: #4dfce0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #232a34;
+}
