@@ -5,6 +5,7 @@ function Hero() {
     return (
         <section className='hero-setion'>
             <div>
+                <div className="tag">Up to 25% off</div>
                 <h3>Raise Your Rank With New Headsets</h3>
                 <h1>SONY <span>MERCURIAL X2230</span></h1>
                 <p>The Sony MERCURIAL X2230 headphones are industry leaders in noise cancellation, featuring Dual Noise Sensor technology. With a frequency response range of 4 Hz to 40,000 Hz, these closed, dynamic headphones deliver next-level music quality</p>

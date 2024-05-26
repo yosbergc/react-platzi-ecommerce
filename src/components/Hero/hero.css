@@ -29,18 +29,26 @@ h3 {
     font-weight: 400;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #432273;
+    background-color: #232a34;
     border-radius: 24px;
     font-size: 1.2rem;
 }
 .addToCartHeroSecondary {
     margin-left: 20px;
-    color: #432273;
+    color: #232a34;
     text-decoration: none;
     font-weight: 400;
     display: inline-block;
     padding: 10px 20px;
-    border: 1px solid #432273;
+    border: 1px solid #232a34;
     border-radius: 24px;
     font-size: 1.2rem;
+}
+.tag {
+    background-color: rgb(148, 0, 0);
+    width: fit-content;
+    padding: 5px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
