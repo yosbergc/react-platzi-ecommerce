@@ -4,7 +4,7 @@
     border-radius: 8px;
     overflow: hidden;
     display: flex;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
     background-position: center !important;
     background-size: auto 100% !important;
 }
