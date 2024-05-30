@@ -2,10 +2,11 @@ import './card.css'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/Products'
 function Card({name, photoSrc, price, category, product}) {
-    const { addProduct } = useContext(ShoppingCartContext)
+    const { addProduct, activeProductDetails } = useContext(ShoppingCartContext)
     const handleClick = () => {addProduct(product)}
+    const handleProduct = () => {activeProductDetails(product)}
     return (
-        <article className='card-single'>
+        <article className='card-single' onClick={handleProduct}>
             <section className="info">
                 <figure style={{
                     backgroundImage: `url('${photoSrc}')`,

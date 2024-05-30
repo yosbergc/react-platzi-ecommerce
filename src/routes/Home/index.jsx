@@ -4,6 +4,7 @@ import Phone from '../../components/Phone'
 import CardContainer from '../../components/CardContainer'
 import { useState, useEffect } from 'react'
 import { getProducts } from '../../services/products'
+import ProductDetails from '../../components/ProductDetails'
 import './home.css'
 function Home() {
     const [products, setProducts] = useState([])
@@ -18,6 +19,7 @@ function Home() {
       <Categories/>
       <Phone />
       <CardContainer productList={products}/>
+      <ProductDetails />
     </>
     )
   }
