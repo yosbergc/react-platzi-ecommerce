@@ -1,5 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import App from './routes/App'
 import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>)
+import { ProvideShoppingCart } from './context/Products.jsx'
+ReactDOM.createRoot(document.getElementById('root')).render(
+<ProvideShoppingCart>
+    <App />
+</ProvideShoppingCart>
+)

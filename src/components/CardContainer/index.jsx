@@ -12,6 +12,7 @@ function CardContainer({ productList }) {
           photoSrc={product.image}
           price={product.price}
           key={product.id}
+          product={product}
         />
       }) : "We don't have products"
       }

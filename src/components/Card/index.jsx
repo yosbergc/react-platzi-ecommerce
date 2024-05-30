@@ -1,5 +1,9 @@
 import './card.css'
-function Card({name, photoSrc, price, category}) {
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../../context/Products'
+function Card({name, photoSrc, price, category, product}) {
+    const { addProduct } = useContext(ShoppingCartContext)
+    const handleClick = () => {addProduct(product)}
     return (
         <article className='card-single'>
             <figure style={{
@@ -8,11 +12,11 @@ function Card({name, photoSrc, price, category}) {
                 backgroundSize: 'cover'
             }}>
                 <span>{category}</span>
-            </figure>
+            </figure>   
             <section className='down'>
                 <h3>{name}</h3>
                 <p>{price}$</p>
-                <button>Add To Cart</button>
+                <button onClick={handleClick}>Add To Cart</button>
             </section>
             
         </article>
