@@ -1,6 +1,6 @@
 import './card.css'
 import { useContext } from 'react'
-import { ShoppingCartContext } from '../../context/Products'
+import { ShoppingCartContext } from '../../context/CartContext'
 function Card({name, photoSrc, price, category, product}) {
     const { addProduct, activeProductDetails } = useContext(ShoppingCartContext)
     const handleClick = () => {addProduct(product)}
@@ -21,7 +21,6 @@ function Card({name, photoSrc, price, category, product}) {
             </section>
             <section className="last-part">
                 <p>{price}$</p>
-                <button onClick={handleClick} className='addToCartBtn'>Add To Cart</button>
             </section>
         </article>
     )

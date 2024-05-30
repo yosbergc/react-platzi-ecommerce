@@ -3,7 +3,7 @@ import Logo from '../../assets/images/LogoTransparent.png'
 import { NavLink } from 'react-router-dom'
 import { CiUser } from "react-icons/ci"
 import PreHeader from '../PreHeader'
-import Cart from '../Cart'
+import Cart from '../CartCounter'
 function Header() {
     return (
         <>

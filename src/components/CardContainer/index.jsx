@@ -3,13 +3,15 @@ import './cardcontainer.css'
 function CardContainer({ productList }) {
     return (
         <>
-        <h4>Some products that you might be interested</h4>
+        <section className="heading">
+          <h4>NEW RELEASES</h4>
+        </section>
         <section className='card-container'>
             {productList.length > 0 ? productList.map(product => {
         return <Card 
           name={product.title}
-          category={product.category}
-          photoSrc={product.image}
+          category={product.category.name}
+          photoSrc={product.images[0]}
           price={product.price}
           key={product.id}
           product={product}

@@ -1,4 +1,4 @@
-const URL = 'https://fakestoreapi.com/products'
+const URL = 'https://api.escuelajs.co/api/v1/products'
 function getProducts() {
     return fetch(URL)
     .then(res => res.json())

@@ -1,14 +1,21 @@
 .card-single {
-    max-width: 250px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card-single:hover {
+    background-color: rgb(237, 237, 237);
+    border-radius: 4px;
 }
 .card-single figure {
-    padding: 10px;
-    cursor: pointer;
+    padding: 20px 20px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    height: 250px;
 }
 .card-single figure span {
     background-color: #232a34;
@@ -17,12 +24,8 @@
     font-weight: 600;
 }
 h3 {
-    font-size: 1.3rem;
-}
-
-.last-part p {
-    margin: 10px 0px;
-    font-size: 1.3rem;
+    font-size: 14px;
+    font-weight: 500;
 }
 .addToCartBtn {
     background-color: black;
