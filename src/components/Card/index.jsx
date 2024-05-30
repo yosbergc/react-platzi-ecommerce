@@ -6,19 +6,22 @@ function Card({name, photoSrc, price, category, product}) {
     const handleClick = () => {addProduct(product)}
     return (
         <article className='card-single'>
-            <figure style={{
-                backgroundImage: `url('${photoSrc}')`,
-                minHeight: '200px',
-                backgroundSize: 'cover'
-            }}>
-                <span>{category}</span>
-            </figure>   
-            <section className='down'>
-                <h3>{name}</h3>
-                <p>{price}$</p>
-                <button onClick={handleClick}>Add To Cart</button>
+            <section className="info">
+                <figure style={{
+                    backgroundImage: `url('${photoSrc}')`,
+                    minHeight: '200px',
+                    backgroundSize: 'cover'
+                }}>
+                    <span>{category}</span>
+                </figure>   
+                <section className='down'>
+                    <h3>{name}</h3>
+                </section>
             </section>
-            
+            <section className="last-part">
+                <p>{price}$</p>
+                <button onClick={handleClick} className='addToCartBtn'>Add To Cart</button>
+            </section>
         </article>
     )
 }

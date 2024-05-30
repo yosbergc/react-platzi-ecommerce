@@ -1,5 +1,9 @@
 .card-single {
     max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
 }
 .card-single figure {
     padding: 10px;
@@ -12,18 +16,15 @@
     padding: 5px;
     font-weight: 600;
 }
-.card-single h3 {
+h3 {
     font-size: 1.3rem;
 }
 
-.card-single .down p {
+.last-part p {
+    margin: 10px 0px;
     font-size: 1.3rem;
 }
-.down {
-    display: grid;
-    gap: 10px;
-}
-.down button {
+.addToCartBtn {
     background-color: black;
     border-radius: 24px;
     padding: 10px;
@@ -32,4 +33,5 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+    width: 100%;
 }

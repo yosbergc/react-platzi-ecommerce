@@ -4,7 +4,7 @@ function PreHeader() {
     return (
         <section className='preheader'>
             <section className="free-shipping">
-            <p>Free Shipping On Orders Over $50 in</p>
+            <p>FREE SHIPPING ON ORDERS OVER 50$</p>
             <ReactCountryFlag
                 countryCode="US"
                 svg
@@ -42,9 +42,6 @@ function PreHeader() {
                 title="ES"
             />
             </section>
-            
-            
-            <p>Buy Wholesale Products Online With Over 100.000 Brands</p>
         </section>
     )
 }
