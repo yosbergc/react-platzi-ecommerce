@@ -17,7 +17,8 @@ function ProvideOrder({children}) {
             date: moment().format('L'),
             products,
             quantityProducts: products.length,
-            totalPrice: totalProducts(products)
+            totalPrice: totalProducts(products),
+            id: moment().format('MMDDYYYYhhmmss')
         }
         const newOrders = [...orders]
         newOrders.push(orderToAdd)

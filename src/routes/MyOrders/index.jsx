@@ -8,20 +8,25 @@ function MyOrders() {
       <main>
         <h2>My Orders</h2>
         <table className='orders'>
-          <tr className='header'>
-            <th>Date</th>
-            <th>Payment</th>
-            <th>Total</th>
-            <th>Items</th>
-            <th>Action</th>
-          </tr>
+          <thead>
+            <tr className='header'>
+              <th>Date</th>
+              <th>Payment</th>
+              <th>Total</th>
+              <th>Items</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
           {orders.length > 0 ? orders.map(order => {
             return <OrderSummary 
               date={order.date}
               productQuantity={order.quantityProducts}
               totalPrice={order.totalPrice}
+              key={order.id}
             />
-          }) : <td>You don't have orders</td>}
+          }) : <tr><td colSpan="5" className='notOrders'>You don't have orders</td></tr>}
+          </tbody>
         </table>
       </main>
     )

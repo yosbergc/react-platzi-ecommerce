@@ -6,10 +6,7 @@
     border-radius: 4px;
 }
 td {
-    display: grid;
-    justify-content: center;
-    align-self: center;
-    padding: 10px 5px;
+    text-align: center;
 }
 .watchOrder {
     padding: 10px 20px;

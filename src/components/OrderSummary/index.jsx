@@ -1,21 +1,11 @@
 import './orderSummary.css'
 function OrderSummary({totalPrice, productQuantity, date}) {
     return (<tr>
-        <th>
-            <td>{date}</td>
-        </th>
-        <th className='paid'>
-            <td>Paid</td>
-        </th>
-        <th>
-            <td>{totalPrice}.00$</td>
-        </th>
-        <th>
-            <td>{productQuantity}</td>
-        </th>
-        <th>
-            <button className='watchOrder'>See Order</button>
-        </th>
+        <td>{date}</td>
+        <td className='paid'>Paid</td>
+        <td>{totalPrice}.00$</td>
+        <td>{productQuantity}</td>
+        <td><button className='watchOrder'>See Order</button></td>
     </tr>)
 }
 export default OrderSummary
