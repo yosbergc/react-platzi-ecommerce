@@ -16,6 +16,9 @@ function ProvideShoppingCart({ children }) {
         newCart.splice(productIndex, 1)
         setCart(newCart)
     }
+    function orderedCart() {
+        setCart([])
+    }
     const activeCartModal = () => {setCartModal(true)}
     const inactiveCartModal = () => {setCartModal(false)}
     const activeProductDetails = (product) => {setProductDetails(product)}
@@ -29,7 +32,8 @@ function ProvideShoppingCart({ children }) {
         inactiveProductDetails,
         activeCartModal,
         inactiveCartModal,
-        deleteProduct
+        deleteProduct,
+        orderedCart
     }
     }>
         {children}

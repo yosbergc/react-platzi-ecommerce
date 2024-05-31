@@ -7,21 +7,26 @@ import SignIn from '../SignIn'
 import SingleOrder from '../SingleOrder'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '../../components/Header'
-
+import { ProvideOrder } from '../../context/OrderContext'
+import { ProvideNotification } from '../../context/NotificationContext'
 function App() {
   return (
-    <Router>
-      <Header/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/category/:category' element={<Home/>}/>
-        <Route path='/account' element={<MyAccount/>}/>
-        <Route path='/my-orders' element={<MyOrders/>}/>
-        <Route path='/login' element={<SignIn/>}/>
-        <Route path='/order' element={<SingleOrder/>}/>
-        <Route path='/*' element={<NotFound/>}/>
-      </Routes>
-    </Router>
+  <ProvideNotification>
+      <ProvideOrder>
+        <Router>
+          <Header/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/category/:category' element={<Home/>}/>
+            <Route path='/account' element={<MyAccount/>}/>
+            <Route path='/my-orders' element={<MyOrders/>}/>
+            <Route path='/login' element={<SignIn/>}/>
+            <Route path='/order/:order' element={<SingleOrder/>}/>
+            <Route path='/*' element={<NotFound/>}/>
+          </Routes>
+        </Router>
+      </ProvideOrder>
+    </ProvideNotification>
   )
 }
 

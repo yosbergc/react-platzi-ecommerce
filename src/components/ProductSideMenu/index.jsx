@@ -13,7 +13,7 @@ function ProductSideMenu({title, price, quantity, imgSrc, id}) {
     return (<article className='productsidemenu'>
         <img src={imgSrc} alt={title} />
         <section className="product-information">
-            <h3>{title} - <span>{quantity}</span></h3>
+            <h3>{title}</h3>
             <p>{price}$</p>
         </section>
         <button onClick={handleDelete}><FaRegTrashAlt size={20}/></button>

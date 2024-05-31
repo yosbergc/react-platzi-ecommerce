@@ -1,11 +1,14 @@
 import './checkoutsidemenu.css'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
+import { OrderContext } from '../../context/OrderContext'
 import { IoIosClose } from "react-icons/io";
 import ProductSideMenu from '../ProductSideMenu';
 import totalProducts from '../../utils/products'
 function CheckoutSideMenu() {
     const { cart, inactiveCartModal, cartModal } = useContext(ShoppingCartContext)
+    const { addOrder } = useContext(OrderContext)
+    const handleOrder = () => { addOrder(cart) }
     if (cartModal){
         return (
         <section className='checkoutSideMenu'>
@@ -30,7 +33,7 @@ function CheckoutSideMenu() {
                         <h5>Total</h5>
                         <p>{totalProducts(cart)}$</p>
                     </section>
-                    <button>BUY NOW</button>
+                    <button onClick={handleOrder}>BUY NOW</button>
                 </section>
         </section>
         )
