@@ -24,8 +24,8 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/category/electronics'>
-                                Earphones
+                            <NavLink to='/category/Headphones'>
+                                Headphones
                             </NavLink>
                         </li>
                         <li>

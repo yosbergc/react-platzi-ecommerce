@@ -22,6 +22,9 @@ function Home() {
         setProducts(data)
       })
     }, [])
+    useEffect(() => {
+      setSearch('')
+    }, [category])
     return (<>
       {
         !category && <>
