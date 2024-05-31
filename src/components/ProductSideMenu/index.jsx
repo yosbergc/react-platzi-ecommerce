@@ -1,6 +1,7 @@
 import './productsidemenu.css'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
+import { FaRegTrashAlt } from "react-icons/fa"
 function ProductSideMenu({title, price, quantity, imgSrc, id}) {
     const { deleteProduct } = useContext(ShoppingCartContext)
     const handleDelete = () => {
@@ -11,9 +12,8 @@ function ProductSideMenu({title, price, quantity, imgSrc, id}) {
         <section className="product-information">
             <h3>{title} - <span>{quantity}</span></h3>
             <p>{price}$</p>
-            
-            <button onClick={handleDelete}>Delete</button>
         </section>
+        <button onClick={handleDelete}><FaRegTrashAlt size={20}/></button>
     </article>)
 }
 export default ProductSideMenu

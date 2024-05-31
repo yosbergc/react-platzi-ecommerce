@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
 import { IoIosClose } from "react-icons/io";
 import ProductSideMenu from '../ProductSideMenu';
+import totalProducts from '../../utils/products'
 function CheckoutSideMenu() {
     const { cart, inactiveCartModal, cartModal } = useContext(ShoppingCartContext)
     if (cartModal){
@@ -24,7 +25,13 @@ function CheckoutSideMenu() {
                         />
                     })}
                 </section>
-            
+                <section className='bottom'>
+                    <section className="total">
+                        <h5>Total</h5>
+                        <p>{totalProducts(cart)}$</p>
+                    </section>
+                    <button>BUY NOW</button>
+                </section>
         </section>
         )
     }

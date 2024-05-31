@@ -21,6 +21,30 @@
 }
 .checkoutSideMenu .products {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-direction: column;
+}
+.bottom {
+    margin-top: 40px;
+}
+.bottom p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.bottom button {
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    
 }

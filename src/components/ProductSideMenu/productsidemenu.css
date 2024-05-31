@@ -1,10 +1,11 @@
 .productsidemenu {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr 1fr;
     gap: 10px;
+    align-items: start;
 }
 .productsidemenu img {
-    height: 150;
+    height: 65px;
     max-width: 100%;
     object-fit: cover;
     border-radius: 8px;
@@ -17,10 +18,9 @@
     display: block;
     background-color: black;
     border: none;
-    border-radius: 24px;
-    padding: 10px;
-    width: 100%;
+    border-radius: 4px;
+    padding: 5px;
     color: white;
+    width: fit-content;
     cursor: pointer;
-    margin-top: 10px;
 }
