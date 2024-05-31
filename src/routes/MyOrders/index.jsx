@@ -10,6 +10,7 @@ function MyOrders() {
         <table className='orders'>
           <thead>
             <tr className='header'>
+              <th>ID</th>
               <th>Date</th>
               <th>Payment</th>
               <th>Total</th>
@@ -24,6 +25,7 @@ function MyOrders() {
               productQuantity={order.quantityProducts}
               totalPrice={order.totalPrice}
               key={order.id}
+              id={order.id}
             />
           }) : <tr><td colSpan="5" className='notOrders'>You don't have orders</td></tr>}
           </tbody>

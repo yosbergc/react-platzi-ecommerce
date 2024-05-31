@@ -8,7 +8,10 @@ import totalProducts from '../../utils/products'
 function CheckoutSideMenu() {
     const { cart, inactiveCartModal, cartModal } = useContext(ShoppingCartContext)
     const { addOrder } = useContext(OrderContext)
-    const handleOrder = () => { addOrder(cart) }
+    const handleOrder = () => { 
+        addOrder(cart)
+        inactiveCartModal()
+     }
     if (cartModal){
         return (
         <section className='checkoutSideMenu'>
