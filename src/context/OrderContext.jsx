@@ -4,9 +4,11 @@ import totalProducts from "../utils/products";
 import { useContext } from "react";
 import { ShoppingCartContext } from "./CartContext";
 import { notificationContext } from "./NotificationContext";
+import { useNavigate } from "react-router-dom";
 const OrderContext = createContext()
 
 function ProvideOrder({children}) {
+    const navigate = useNavigate()
     const { orderedCart } = useContext(ShoppingCartContext)
     const { newNotification } = useContext(notificationContext)
     const [orders, setOrders] = React.useState([])
@@ -22,6 +24,9 @@ function ProvideOrder({children}) {
         setOrders(newOrders)
         newNotification('Order added')
         orderedCart()
+        setTimeout(() => {
+            navigate('/my-orders')
+        }, 3000)
     }
     return <OrderContext.Provider value={{
         orders,

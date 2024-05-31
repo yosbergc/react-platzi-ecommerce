@@ -11,9 +11,9 @@ import { ProvideOrder } from '../../context/OrderContext'
 import { ProvideNotification } from '../../context/NotificationContext'
 function App() {
   return (
-  <ProvideNotification>
+  <Router>
+    <ProvideNotification>
       <ProvideOrder>
-        <Router>
           <Header/>
           <Routes>
             <Route path='/' element={<Home/>}/>
@@ -24,9 +24,9 @@ function App() {
             <Route path='/order/:order' element={<SingleOrder/>}/>
             <Route path='/*' element={<NotFound/>}/>
           </Routes>
-        </Router>
       </ProvideOrder>
     </ProvideNotification>
+  </Router>
   )
 }
 
