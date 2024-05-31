@@ -19,3 +19,8 @@
     display: flex;
     justify-content: space-between;
 }
+.checkoutSideMenu .products {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}

@@ -4,7 +4,7 @@ const ShoppingCartContext = createContext()
 function ProvideShoppingCart({ children }) {
     const [cart, setCart] = useState([]);
     const [productDetails, setProductDetails] = useState(false)
-    const [cartModal, setCartModal] = useState(true)
+    const [cartModal, setCartModal] = useState(false)
     function addProduct(product) {
         const newCart = [...cart];
         newCart.push(product)

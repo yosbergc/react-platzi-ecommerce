@@ -12,10 +12,13 @@
     border-radius: 4px;
 }
 .card-single figure {
-    padding: 20px 20px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
     height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 .card-single figure span {
     background-color: #232a34;

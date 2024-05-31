@@ -1,9 +1,13 @@
 import './card.css'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
+import { IoIosAddCircle } from "react-icons/io"
 function Card({name, photoSrc, price, category, product}) {
     const { addProduct, activeProductDetails } = useContext(ShoppingCartContext)
-    const handleClick = () => {addProduct(product)}
+    const handleClick = (e) => {
+        e.stopPropagation()
+        addProduct(product)
+    }
     const handleProduct = () => {activeProductDetails(product)}
     return (
         <article className='card-single' onClick={handleProduct}>
@@ -14,6 +18,7 @@ function Card({name, photoSrc, price, category, product}) {
                     backgroundSize: 'cover'
                 }}>
                     <span>{category}</span>
+                    <IoIosAddCircle size={30} onClick={handleClick} color='white'/>
                 </figure>   
                 <section className='down'>
                     <h3>{name}</h3>

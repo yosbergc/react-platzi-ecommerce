@@ -1,0 +1,26 @@
+.productsidemenu {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+.productsidemenu img {
+    height: 150;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.productsidemenu h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.productsidemenu button {
+    display: block;
+    background-color: black;
+    border: none;
+    border-radius: 24px;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
