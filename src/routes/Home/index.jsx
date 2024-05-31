@@ -15,7 +15,7 @@ function Home() {
     const { category } = useParams()
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState('')
-    const filteredProducts = products.filter(product => product.title.toLowerCase().startsWith(search.toLowerCase()))
+    const filteredProducts = products.filter(product => product.title.toLowerCase().includes(search.toLowerCase()))
     useEffect(() => {
       getProducts()
       .then(data => {
