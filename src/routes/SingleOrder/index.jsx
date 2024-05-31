@@ -1,13 +1,21 @@
 import { useParams } from "react-router-dom"
-import { useContext } from "react"
+import React, { useContext } from "react"
 import { OrderContext } from '../../context/OrderContext'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import ProductBought from '../../components/ProductBought'
 import './singleorder.css'
+
 function SingleOrder() {
     const { id } = useParams()
     const { orders } = useContext(OrderContext)
-    const order = orders.find(order => order.id === id)
+    const order = orders?.find(order => order.id === id)
+    const navigate = useNavigate()
+    React.useEffect(() => {
+      if (!order) {
+        navigate('/my-orders')
+      }
+    }, [orders])
+    if (order) {
     return (
       <main>
         <h2>My Order - {id}</h2>
@@ -37,5 +45,5 @@ function SingleOrder() {
       </main>
     )
   }
-  
+}
 export default SingleOrder  

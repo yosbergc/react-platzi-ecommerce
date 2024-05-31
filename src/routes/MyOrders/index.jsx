@@ -2,6 +2,8 @@ import './myorders.css'
 import { useContext } from 'react'
 import { OrderContext} from '../../context/OrderContext'
 import OrderSummary from '../../components/OrderSummary'
+import CheckoutSideMenu from '../../components/CheckoutSideMenu'
+import Notification from '../../components/Notification'
 function MyOrders() {
     const { orders } = useContext(OrderContext)
     return (
@@ -30,6 +32,8 @@ function MyOrders() {
           }) : <tr><td colSpan="5" className='notOrders'>You don't have orders</td></tr>}
           </tbody>
         </table>
+        <CheckoutSideMenu />
+        <Notification />
       </main>
     )
   }

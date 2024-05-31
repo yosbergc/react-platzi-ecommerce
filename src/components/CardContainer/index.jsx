@@ -3,9 +3,6 @@ import './cardcontainer.css'
 function CardContainer({ productList }) {
     return (
         <>
-        <section className="heading">
-          <h4>NEW RELEASES</h4>
-        </section>
         <section className='card-container'>
             {productList.length > 0 ? productList.map(product => {
         return <Card 

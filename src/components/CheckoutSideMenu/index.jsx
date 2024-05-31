@@ -33,7 +33,7 @@ function CheckoutSideMenu() {
                 <section className='bottom'>
                     <section className="total">
                         <h5>Total</h5>
-                        <p>{totalProducts(cart)}$</p>
+                        <p>{totalProducts(cart)}.00$</p>
                     </section>
                     <button onClick={handleOrder}>BUY NOW</button>
                 </section>

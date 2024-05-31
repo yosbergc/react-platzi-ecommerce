@@ -47,8 +47,3 @@
 .bottom button:hover {
     background-color: blue;
 }
-.total {
-    display: flex;
-    justify-content: space-between;
-    
-}
