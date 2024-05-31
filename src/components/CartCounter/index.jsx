@@ -3,9 +3,9 @@ import { BsCart2 } from "react-icons/bs";
 import { ShoppingCartContext } from '../../context/CartContext.jsx';
 import { useContext } from 'react';
 function Cart() {
-    const { cart } = useContext(ShoppingCartContext)
+    const { cart, activeCartModal } = useContext(ShoppingCartContext)
     return (
-        <section className='cart'>
+        <section className='cart' onClick={activeCartModal}>
             <BsCart2 size={20}/>
             <p>{cart.length}</p>
         </section>

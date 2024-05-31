@@ -2,13 +2,14 @@
     position: fixed;
     right: 0px;
     top: 0px;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(255, 255, 255);
     width: fit-content;
     max-width: 400px;
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
     padding: 20px;
+    border: 2px solid black;
 }
 .productDetails img {
     height: auto;

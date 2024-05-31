@@ -4,19 +4,25 @@ const ShoppingCartContext = createContext()
 function ProvideShoppingCart({ children }) {
     const [cart, setCart] = useState([]);
     const [productDetails, setProductDetails] = useState(false)
+    const [cartModal, setCartModal] = useState(true)
     function addProduct(product) {
         const newCart = [...cart];
         newCart.push(product)
         setCart(newCart)
     }
+    const activeCartModal = () => {setCartModal(true)}
+    const inactiveCartModal = () => {setCartModal(false)}
     const activeProductDetails = (product) => {setProductDetails(product)}
     const inactiveProductDetails = () => {setProductDetails(false)}
     return <ShoppingCartContext.Provider value={{
         cart,
+        cartModal,
         addProduct,
         productDetails,
         activeProductDetails,
-        inactiveProductDetails
+        inactiveProductDetails,
+        activeCartModal,
+        inactiveCartModal
     }
     }>
         {children}

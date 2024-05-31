@@ -4,7 +4,8 @@ import { ShoppingCartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import './productdetails.css'
 function ProductDetails() {  
-    const { productDetails, inactiveProductDetails } = useContext(ShoppingCartContext)
+    const { productDetails, inactiveProductDetails, addProduct } = useContext(ShoppingCartContext)
+    const handleProduct = () => {addProduct(productDetails)}
     if (productDetails) {
         const { title, category, description, images, price } = productDetails;
         return <section className="productDetails">
@@ -17,7 +18,7 @@ function ProductDetails() {
             <h2 className="productName">{title}</h2>
             <p>{description}</p>
             <p className="price">{price}$ <span className="price-original">{price + 19.99}</span></p>
-            <button>Add To Cart</button>
+            <button onClick={handleProduct}>Add To Cart</button>
         </section>
     }
 }

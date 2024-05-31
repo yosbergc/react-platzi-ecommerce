@@ -5,6 +5,7 @@ import CardContainer from '../../components/CardContainer'
 import { useState, useEffect } from 'react'
 import { getProducts } from '../../services/products'
 import ProductDetails from '../../components/ProductDetails'
+import CheckoutSideMenu from '../../components/CheckoutSideMenu'
 import './home.css'
 function Home() {
     const [products, setProducts] = useState([])
@@ -20,6 +21,7 @@ function Home() {
       <Phone />
       <CardContainer productList={products}/>
       <ProductDetails />
+      <CheckoutSideMenu />
     </>
     )
   }
