@@ -10,6 +10,12 @@ function ProvideShoppingCart({ children }) {
         newCart.push(product)
         setCart(newCart)
     }
+    function deleteProduct(productId) {
+        const newCart = [...cart];
+        const productIndex = newCart.findIndex(product => product.id === productId)
+        newCart.splice(productIndex, 1)
+        setCart(newCart)
+    }
     const activeCartModal = () => {setCartModal(true)}
     const inactiveCartModal = () => {setCartModal(false)}
     const activeProductDetails = (product) => {setProductDetails(product)}
@@ -22,7 +28,8 @@ function ProvideShoppingCart({ children }) {
         activeProductDetails,
         inactiveProductDetails,
         activeCartModal,
-        inactiveCartModal
+        inactiveCartModal,
+        deleteProduct
     }
     }>
         {children}

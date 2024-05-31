@@ -20,6 +20,7 @@ function CheckoutSideMenu() {
                             price={product.price}
                             key={product.title}
                             quantity={1}
+                            id={product.id}
                         />
                     })}
                 </section>
