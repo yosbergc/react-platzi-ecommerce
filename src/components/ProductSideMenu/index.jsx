@@ -1,11 +1,14 @@
 import './productsidemenu.css'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
+import { notificationContext } from '../../context/NotificationContext'
 import { FaRegTrashAlt } from "react-icons/fa"
 function ProductSideMenu({title, price, quantity, imgSrc, id}) {
     const { deleteProduct } = useContext(ShoppingCartContext)
+    const { newNotification } = useContext(notificationContext)
     const handleDelete = () => {
         deleteProduct(id)
+        newNotification('Deleted product succesfully')
     }
     return (<article className='productsidemenu'>
         <img src={imgSrc} alt={title} />

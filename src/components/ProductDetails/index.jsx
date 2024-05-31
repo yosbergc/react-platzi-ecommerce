@@ -5,7 +5,10 @@ import { useContext } from "react";
 import './productdetails.css'
 function ProductDetails() {  
     const { productDetails, inactiveProductDetails, addProduct } = useContext(ShoppingCartContext)
-    const handleProduct = () => {addProduct(productDetails)}
+    const handleProduct = () => {
+        addProduct(productDetails)
+        inactiveProductDetails()
+    }
     if (productDetails) {
         const { title, category, description, images, price } = productDetails;
         return <section className="productDetails">
