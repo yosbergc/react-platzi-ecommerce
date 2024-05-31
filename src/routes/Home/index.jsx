@@ -9,10 +9,13 @@ import ProductDetails from '../../components/ProductDetails'
 import CheckoutSideMenu from '../../components/CheckoutSideMenu'
 import Notification from '../../components/Notification'
 import capitalizeFirstLetter from '../../utils/words'
+import Search from '../../components/Search'
 import './home.css'
 function Home() {
     const { category } = useParams()
     const [products, setProducts] = useState([])
+    const [search, setSearch] = useState('')
+    const filteredProducts = products.filter(product => product.title.toLowerCase().startsWith(search.toLowerCase()))
     useEffect(() => {
       getProducts()
       .then(data => {
@@ -30,13 +33,14 @@ function Home() {
       {
         category ?
         <section className="heading">
-          <h4>{capitalizeFirstLetter(category)}</h4>
+          <Search category={category} search={search} setSearch={setSearch}/>
         </section> :
         <section className="heading">
           <h4>New Releases</h4>
         </section>
       }
-        <CardContainer productList={products}/>
+
+        <CardContainer productList={filteredProducts}/>
         <ProductDetails />
         <CheckoutSideMenu />
         <Notification />
