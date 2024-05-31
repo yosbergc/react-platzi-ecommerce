@@ -1,0 +1,19 @@
+.product {
+    font-size: 1.5rem;
+    margin: 20px 0px;
+}
+.bottom {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+.bottom button {
+    margin: 0px;
+    width: fit-content;
+}
+.products {
+    display: grid;
+    gap: 20px;
+}

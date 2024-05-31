@@ -8,7 +8,7 @@
 td {
     text-align: center;
 }
-.watchOrder {
+.buttonOrder {
     padding: 10px 20px;
     margin-top: 10px;
     border: none;
@@ -17,4 +17,6 @@ td {
     color: white;
     font-weight: 600;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
 }

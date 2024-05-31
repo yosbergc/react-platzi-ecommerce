@@ -21,7 +21,7 @@ function App() {
             <Route path='/account' element={<MyAccount/>}/>
             <Route path='/my-orders' element={<MyOrders/>}/>
             <Route path='/login' element={<SignIn/>}/>
-            <Route path='/order/:order' element={<SingleOrder/>}/>
+            <Route path='/order/:id' element={<SingleOrder/>}/>
             <Route path='/*' element={<NotFound/>}/>
           </Routes>
       </ProvideOrder>

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/CartContext'
 import { notificationContext } from '../../context/NotificationContext'
 import { FaRegTrashAlt } from "react-icons/fa"
-function ProductSideMenu({title, price, quantity, imgSrc, id}) {
+function ProductSideMenu({title, price, imgSrc, id}) {
     const { deleteProduct } = useContext(ShoppingCartContext)
     const { newNotification } = useContext(notificationContext)
     const handleDelete = () => {
